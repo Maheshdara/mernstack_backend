@@ -5,7 +5,7 @@ const Videodata = require("./model2");
 const jwt = require("jsonwebtoken");
 const middleware = require("./middleware")
 const core = require("cors")
-const Base = process.env.Base_url
+const PORT = process.env.PORT || 5000
 
 
 const app  = express();
@@ -98,6 +98,6 @@ app.delete("/deletetasks/:id",async(req,res)=>{
 
 
 
-app.listen(5000,()=>{
-    console.log("server running")
+app.listen(PORT,()=>{
+    console.log("server running ${PORT}")
 })
